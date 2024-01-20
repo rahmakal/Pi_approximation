@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 from matplotlib.patches import Rectangle
-import random  
+from random import random
 from statistics import mean
 fig, (ax1,ax2) = plt.subplots(1,2)
 fig.set_size_inches(12, 5.5)
@@ -17,8 +17,8 @@ for t in range(500):
     inD = 0   
     while (i<3000): 
         i+=1
-        x = random.random() 
-        y = random.random() 
+        x = random() 
+        y = random() 
         if (x*x+y*y<=1):    
             inD+=1
             if(t==1):
