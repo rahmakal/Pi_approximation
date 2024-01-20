@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 from matplotlib.patches import Rectangle
-from random import random
+from random import random,seed
 from statistics import mean
 fig, (ax1,ax2) = plt.subplots(1,2)
 fig.set_size_inches(12, 5.5)
@@ -31,7 +31,7 @@ for t in range(500):
             ax2.plot(i,myPi,'g.')
     l.append(myPi)
 
-ax1.set_title("Pi approximated in test 1: %0.3f\nPi approximated after 500 tests: %0.3f\n-Visualisation for test 1:" %(myPi,mean(l)))
+ax1.set_title("Pi approximated in test 1: %0.6f\nPi approximated after 500 tests: %0.6f\n-Visualisation for test 1:" %(myPi,mean(l)))
 ax2.set_xlabel("iterations")
 ax2.set_ylabel("y")
 ax2.set_title("Convergence in test 1\nf(i)=Pi")
